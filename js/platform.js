@@ -1,5 +1,6 @@
 class Plat {
     constructor(x, y) {
+
         this.x = x;
         this.y = y;
         this.height = 11;
@@ -8,7 +9,13 @@ class Plat {
     }
 
     render() {
+
         fill(this.color);
         rect(this.x, this.y, this.width, this.height);
+    }
+
+    move() {
+
+        this.x--;
     }
 }
