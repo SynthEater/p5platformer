@@ -4,8 +4,8 @@ class Plat {
         this.x = x;
         this.y = y;
         this.height = 11;
-        this.width = 40;
-        this.color = color(random(70, 200));
+        this.width = 190;
+        this.color = color(random(160, 220));
     }
 
     render() {
@@ -16,6 +16,6 @@ class Plat {
 
     move() {
 
-        this.x--;
+        this.x -= 4;
     }
 }
