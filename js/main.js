@@ -8,14 +8,13 @@ function setup() {
 
     //generating platforms
     for (let i = 1; i < nbPlat; i++) {
-        plat[i] = new Plat((i * 100) + (wnX - 39), 100);
+        plat[i] = new Plat((i * 100) + (wnX - 39), random(80, 120));
     }
 }
 
 function draw() {
     background(51);
     for (let j = 1; j < nbPlat; j++) {
-        /////////////////////////////////////////
         plat[j].render();
         plat[j].move();
     }
