@@ -25,7 +25,7 @@ function setup() {
     ground = new Ground(0, wnY - 200, levelWidth, wnY - 200);
 
     //generating player
-    player = new Player(50, wnY - (wnY / 2));
+    player = new Player(50, wnY - 236);
 }
 
 function draw() {
