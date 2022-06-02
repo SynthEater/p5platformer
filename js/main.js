@@ -14,6 +14,9 @@ let levelWidth = wnX * 20;
 //player variables
 let player;
 
+//decals variables
+let decal;
+
 function setup() {
     createCanvas(wnX, wnY);
 
@@ -32,6 +35,9 @@ function setup() {
 
     //generating player
     player = new Player(50, wnY - 236);
+
+    // generating decals
+    decal = new Decal(wnX / 2, 100);
 }
 
 function draw() {
@@ -39,9 +45,21 @@ function draw() {
 
     //ground.render();
     player.render();
+    player.update();
+    decal.randomPick();
+    decal.render();
+
 
     for (let i = 1; i < plat.length; i++) {
         plat[i].render();
         plat[i].move();
+
+    }
+
+    function keyPressed() {
+        if (Keydown) {
+            player.jump();
+            console.log("allo");
+        }
     }
 }
